@@ -2,6 +2,7 @@
 
 Dockerfiles for working with [EnergyPlus](https://energyplus.net/) and R
 
+[![CircleCI](https://circleci.com/gh/hongyuanjia/eplusr-docker.svg?style=svg)](https://circleci.com/gh/hongyuanjia/eplusr-docker)
 [![license](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://opensource.org/licenses/GPL-2.0)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
@@ -65,8 +66,6 @@ docker run --rm \
 Navigate to <http://localhost:8787> and you should be logged into RStudio as
 the `rstudio` user without needing a password.
 
-See [rocker/r-ver](https://github.com/rocker-org/rocker-versioned) for details.
-
 ## More help
 
 See the
@@ -78,7 +77,7 @@ container and the Wiki for additional documentation in the
 
 The Dockerfiles in this repository is licensed under the GPL 2 or later.
 
-## Trademarks ##
+## Trademarks
 
 RStudio is a registered trademark of RStudio, Inc. The use of the trademarked
 term RStudio and the distribution of the RStudio binaries through the images

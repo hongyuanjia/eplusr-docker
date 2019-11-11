@@ -18,7 +18,9 @@ via [eplusr](cran.r-project.org/package=eplusr) package, based on
 
 ## Quickstart
 
-    docker run --rm -p 8787:8787 -e PASSWORD=yourpasswordhere hongyuanjia/eplusr
+```
+docker run --rm -p 8787:8787 -e PASSWORD=yourpasswordhere hongyuanjia/eplusr
+```
 
 Users can include the version tag of EnergyPlus, e.g.
 `hongyuanjia/eplusr:9.1.0`, and use the default `latest` tag, e.g.
@@ -38,14 +40,17 @@ current EnergyPlus you are specified. There are two ways to do so:
 
 * If you want
   EnergyPlus to be installed into the default location using
-  [eplusr::install_eplus()](https://hongyuanjia.github.io/eplusr/reference/install_eplus.html),
+  [`eplusr::install_eplus()`](https://hongyuanjia.github.io/eplusr/reference/install_eplus.html),
   you have to give the root permissions when you run the container by passing
   `ROOT=TRUE`:
 
-    docker run -d -p 8787:8787 -e ROOT=TRUE -e PASSWORD=yourpasswordhere hongyuanjia/eplusr
+  ```
+  docker run -d -p 8787:8787 -e ROOT=TRUE -e PASSWORD=yourpasswordhere hongyuanjia/eplusr
+  ```
 
 * If you do not want to give the root permission, an alternative way is to
-  download the version of EnergyPlus you want using `eplusr::download_eplus()`
+  download the version of EnergyPlus you want using
+  [`eplusr::download_eplus()`](https://hongyuanjia.github.io/eplusr/reference/install_eplus.html)
   and manually install it following the
   [instructions](https://energyplus.net/installation-linux).
 
@@ -57,10 +62,7 @@ AWS or other cloud machine with a publicly accessible IP address.
 Simply set the environmental variable `DISABLE_AUTH=true`, e.g.
 
 ```
-docker run --rm \
-  -p 127.0.0.1:8787:8787 \
-  -e DISABLE_AUTH=true \
-  hongyuanjia/eplusr
+docker run --rm -p 8787:8787 -e DISABLE_AUTH=true hongyuanjia/eplusr
 ```
 
 Navigate to <http://localhost:8787> and you should be logged into RStudio as
@@ -68,10 +70,9 @@ the `rstudio` user without needing a password.
 
 ## More help
 
-See the
-[rocker/rstudio](https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/)
-container and the Wiki for additional documentation in the
-[rocker](https://github.com/rocker-org/rocker) project: <https://github.com/rocker-org/rocker/wiki>
+* [rocker/rstudio](https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/) container
+* [Wiki](https://github.com/rocker-org/rocker/wiki) for additional documentation
+  in the [rocker](https://github.com/rocker-org/rocker) project
 
 ## License
 

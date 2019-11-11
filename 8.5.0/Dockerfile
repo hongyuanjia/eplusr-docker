@@ -10,8 +10,8 @@ LABEL org.label-schema.license="GPL-3.0" \
 ARG EPLUS_VER
 
 ## Environment variable for EnergyPlus
-ENV EPLUS_VER ${EPLUS_VER:-9.2.0}
-ENV EPLUS_SHA ${EPLUS_SHA:-921312fa1d}
+ENV EPLUS_VER ${EPLUS_VER:-8.5.0}
+ENV EPLUS_SHA ${EPLUS_SHA:-c87e61b44b}
 ENV EPLUS_FILE EnergyPlus-$EPLUS_VER-$EPLUS_SHA-Linux-x86_64.sh
 ENV EPLUS_URL https://github.com/NREL/EnergyPlus/releases/download/v$EPLUS_VER/$EPLUS_FILE
 

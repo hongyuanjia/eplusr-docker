@@ -8,24 +8,27 @@ Dockerfiles for working with [EnergyPlus](https://energyplus.net/) and R
 
 ## Overview
 
+![rocker](https://avatars0.githubusercontent.com/u/9100160?v=3&s=200)
+
 image                                                 | description                                              | size                                                                                                             | metrics                                                                                            | build status
 ----------------                                      | -----------------------------------------                | ------                                                                                                           | -------                                                                                            | --------------
 [eplusr](https://hub.docker.com/r/hongyuanjia/eplusr) | R with eplusr installed & EnergyPlus specified installed | [![](https://images.microbadger.com/badges/image/hongyuanjia/eplusr.svg)](https://microbadger.com/images/hongyuanjia/eplusr) | [![](https://img.shields.io/docker/pulls/hongyuanjia/eplusr.svg)](https://hub.docker.com/r/hongyuanjia/eplusr) | [![](https://img.shields.io/docker/automated/hongyuanjia/eplusr.svg)](https://hub.docker.com/r/hongyuanjia/eplusr/builds)
 
-This repository provides contains Dockerfiles for working with EnergyPlus in R
-via [eplusr](cran.r-project.org/package=eplusr) package, based on
+This repository provides Dockerfiles for working with EnergyPlus in R
+via [eplusr](https://cran.r-project.org/package=eplusr) package, based on
 [rocker/rstudio:latest](https://hub.docker.com/r/rocker/rstudio) container.
+
+## Supported EnergyPlus versions
+
+All releasees starting from `v8.3.0` are supported. Users can include the
+version tag of EnergyPlus, e.g.  `hongyuanjia/eplusr:9.1.0`, or use the default
+`latest` tag, e.g. `hongyuanjia/eplusr` for the most up-to-date EnergyPlus.
 
 ## Quickstart
 
 ```
 docker run --rm -p 8787:8787 -e PASSWORD=yourpasswordhere hongyuanjia/eplusr
 ```
-
-Users can include the version tag of EnergyPlus, e.g.
-`hongyuanjia/eplusr:9.1.0`, and use the default `latest` tag, e.g.
-`hongyuanjia/eplusr` for the most up-to-date EnergyPlus. Currrently, the lowest
-supported version is `v8.3.0`.
 
 Visit <http://localhost:8787> in your browser and log in with username `rstudio` and
 the password you set. **NB: Setting a password is now REQUIRED.** Container

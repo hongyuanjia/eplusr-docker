@@ -12,17 +12,24 @@ Dockerfiles for working with [EnergyPlus](https://energyplus.net/) and R
 
 image                                                 | description                                              | size                                                                                                             | metrics                                                                                            | build status
 ----------------                                      | -----------------------------------------                | ------                                                                                                           | -------                                                                                            | --------------
-[eplusr](https://hub.docker.com/r/hongyuanjia/eplusr) | R with eplusr installed & EnergyPlus specified installed | [![](https://images.microbadger.com/badges/image/hongyuanjia/eplusr.svg)](https://microbadger.com/images/hongyuanjia/eplusr) | [![](https://img.shields.io/docker/pulls/hongyuanjia/eplusr.svg)](https://hub.docker.com/r/hongyuanjia/eplusr) | [![](https://img.shields.io/docker/automated/hongyuanjia/eplusr.svg)](https://hub.docker.com/r/hongyuanjia/eplusr/builds)
+[eplusr](https://hub.docker.com/r/hongyuanjia/eplusr) | R with eplusr installed & EnergyPlus specified installed | [![](https://images.microbadger.com/badges/image/hongyuanjia/eplusr.svg)](https://microbadger.com/images/hongyuanjia/eplusr) | [![](https://img.shields.io/docker/pulls/hongyuanjia/eplusr.svg)](https://hub.docker.com/r/hongyuanjia/eplusr) | [![](https://img.shields.io/docker/cloud/automated/hongyuanjia/eplusr.svg)](https://hub.docker.com/r/hongyuanjia/eplusr/builds)
 
 This repository provides Dockerfiles for working with EnergyPlus in R
 via [eplusr](https://cran.r-project.org/package=eplusr) package, based on
-[rocker/rstudio:latest](https://hub.docker.com/r/rocker/rstudio) container.
+[rocker/rstudio:latest](https://hub.docker.com/r/rocker/rstudio) and
+[rocker/verse:latest](https://hub.docker.com/r/rocker/verse) container.
 
 ## Supported EnergyPlus versions
 
 All releasees starting from `v8.3.0` are supported. Users can include the
 version tag of EnergyPlus, e.g.  `hongyuanjia/eplusr:9.1.0`, or use the default
 `latest` tag, e.g. `hongyuanjia/eplusr` for the most up-to-date EnergyPlus.
+
+The default upstream container is
+[rocker/rstudio:latest](https://hub.docker.com/r/rocker/rstudio). But you can
+add a suffix `-verse` to get a
+[rocker/verse:latest](https://hub.docker.com/r/rocker/verse) based container,
+e.g. `hongyuanjia/eplusr:9.1.0-verse`, `hongyuanjia/eplusr:latest-verse`.
 
 ## Quickstart
 

@@ -1,36 +1,92 @@
-version: '2'
+version: '3'
 services:
 
   8.3.0:
     image: hongyuanjia/eplusr:8.3.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.3.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.3.0)"
   8.4.0:
     image: hongyuanjia/eplusr:8.4.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.4.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.4.0)"
   8.5.0:
     image: hongyuanjia/eplusr:8.5.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.5.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.5.0)"
   8.6.0:
     image: hongyuanjia/eplusr:8.6.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.6.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.6.0)"
   8.7.0:
     image: hongyuanjia/eplusr:8.7.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.7.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.7.0)"
   8.8.0:
     image: hongyuanjia/eplusr:8.8.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.8.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.8.0)"
   8.9.0:
     image: hongyuanjia/eplusr:8.9.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 8.9.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.9.0)"
   9.0.0:
     image: hongyuanjia/eplusr:9.0.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 9.0.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.0.0)"
   9.0.1:
     image: hongyuanjia/eplusr:9.0.1
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 9.0.1"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.0.1)"
   9.1.0:
     image: hongyuanjia/eplusr:9.1.0
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 9.1.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.1.0)"
   latest:
     image: hongyuanjia/eplusr:latest
-    command: Rscript --quiet -e "eplusr::avail_eplus() == 9.2.0"
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.2.0)"
+
+  8.3.0-verse:
+    image: hongyuanjia/eplusr:8.3.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.3.0)"
+    args:
+      - VERSE=1
+  8.4.0-verse:
+    image: hongyuanjia/eplusr:8.4.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.4.0)"
+    args:
+      - VERSE=1
+  8.5.0-verse:
+    image: hongyuanjia/eplusr:8.5.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.5.0)"
+    args:
+      - VERSE=1
+  8.6.0-verse:
+    image: hongyuanjia/eplusr:8.6.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.6.0)"
+    args:
+      - VERSE=1
+  8.7.0-verse:
+    image: hongyuanjia/eplusr:8.7.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.7.0)"
+    args:
+      - VERSE=1
+  8.8.0-verse:
+    image: hongyuanjia/eplusr:8.8.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.8.0)"
+    args:
+      - VERSE=1
+  8.9.0-verse:
+    image: hongyuanjia/eplusr:8.9.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(8.9.0)"
+    args:
+      - VERSE=1
+  9.0.0-verse:
+    image: hongyuanjia/eplusr:9.0.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.0.0)"
+    args:
+      - VERSE=1
+  9.0.1-verse:
+    image: hongyuanjia/eplusr:9.0.1
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.0.1)"
+    args:
+      - VERSE=1
+  9.1.0-verse:
+    image: hongyuanjia/eplusr:9.1.0
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.1.0)"
+    args:
+      - VERSE=1
+  latest-verse:
+    image: hongyuanjia/eplusr:latest
+    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.2.0)"
+    args:
+      - VERSE=1

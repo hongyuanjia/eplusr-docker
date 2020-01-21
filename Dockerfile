@@ -1,6 +1,4 @@
-ARG VERSE
-ENV UPSTREAM=${VERSE:+verse}
-ENV UPSTREAM=${VERSE:-rstudio}
+ARG UPSTREAM=rstudio
 
 ## Based on rocker/rstudio or rocker/verse Debian-based image
 FROM rocker/$UPSTREAM:latest

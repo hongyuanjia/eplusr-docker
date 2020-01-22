@@ -2,11 +2,9 @@ version: '3'
 services:
 
   latest:
-    image: hongyuanjia/eplusr:latest
-    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.2.0)"
+    image: hongyuanjia/eplusr:9.1.0
+    command: Rscript --quiet -e "stopifnot(eplusr::is_avail_eplus(9.1))"
 
   latest-verse:
-    image: hongyuanjia/eplusr:latest-verse
-    command: Rscript --quiet -e "eplusr::is_avail_eplus(9.2.0)" && Rscript --quiet -e "tinytex::r_texmf()"
-    args:
-      - UPSTREAM=verse
+    image: hongyuanjia/eplusr:9.1.0-verse
+    command: Rscript --quiet -e "stopifnot(eplusr::is_avail_eplus(9.1)); tinytex::r_texmf()"

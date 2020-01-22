@@ -8,9 +8,6 @@ LABEL org.label-schema.license="GPL-2.0" \
       org.label-schema.vendor="IDEAS Lab, NUS" \
       maintainer="Hongyuan Jia <hongyuan.jia@bears-berkeley.sg>"
 
-## EnergyPlus version
-ARG EPLUS_VER
-
 ## Environment variable for EnergyPlus
 ENV EPLUS_VER ${EPLUS_VER:-9.0.1}
 ENV EPLUS_SHA ${EPLUS_SHA:-bb7ca4f0da}

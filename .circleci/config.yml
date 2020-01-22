@@ -1,12 +1,6 @@
 version: 2
 jobs:
-  base:
-    docker:
-      - image: hongyuanjia/eplusr:9.1.0
-    steps:
-      - checkout
-      - run: Rscript -e "stopifnot(eplusr::is_valid_eplus(9.1))"
-  verse:
+  build:
     docker:
       - image: hongyuanjia/eplusr:9.1.0-verse
     steps:

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [[ $DOCKER_TAG =~ "-verse" ]]
+if [[ $DOCKER_TAG =~ "-verse" ]];
 then
     docker build -t $IMAGE_NAME --build-arg UPSTREAM=verse .
 else

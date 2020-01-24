@@ -25,6 +25,10 @@ RUN apt-get update \
         zlib1g-dev \
     ## Download EnergyPlus
     && wget -q -P /tmp/ $EPLUS_URL \
+    # Fix EnergyPlus installation
+    # see https://github.com/NREL/EnergyPlus/issues/7256
+    # and https://github.com/hongyuanjia/eplusr/pull/193
+    sed -i '70s/install_directory=${install_directory}\/${package_name}' /tmp/$EPLUS_FILE
     ## Install EnergyPlus
     && chmod +x /tmp/$EPLUS_FILE \
     && echo "y\r" | /tmp/$EPLUS_FILE \

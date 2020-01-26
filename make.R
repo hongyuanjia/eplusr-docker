@@ -37,15 +37,15 @@ if (ver == "9.1.0") {
     # Fix EnergyPlus installation
     # see https://github.com/NREL/EnergyPlus/issues/7256
     # and https://github.com/hongyuanjia/eplusr/pull/193
-    && sed -i \'47s/^/ori_install_directory=${install_directory}\\ninstall_directory=${install_directory}\\/${package_name}\' /tmp/$EPLUS_FILE \\
+    && sed -i \'47s/^/ori_install_directory=${install_directory}\\ninstall_directory=${install_directory}\\/${package_name}/\' /tmp/$EPLUS_FILE \\
     && sed -i \'80s/163/164/\' /tmp/$EPLUS_FILE \\
-    && sed -i \'89s/^/install_directory=${ori_install_directory}\' /tmp/$EPLUS_FILE \\'
+    && sed -i \'89s/^/install_directory=${ori_install_directory}/\' /tmp/$EPLUS_FILE \\'
 } else if (numeric_version(ver) > 9.1) {
 '
     # Fix EnergyPlus installation
     # see https://github.com/NREL/EnergyPlus/issues/7256
     # and https://github.com/hongyuanjia/eplusr/pull/193
-    && sed -i \'70s/install_directory=${install_directory}\\/${package_name}\' /tmp/$EPLUS_FILE \\'
+    && sed -i \'70s/install_directory=${install_directory}\\/${package_name}/\' /tmp/$EPLUS_FILE \\'
 }, '
     ## Install EnergyPlus
     && chmod +x /tmp/$EPLUS_FILE \\

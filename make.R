@@ -20,8 +20,15 @@ LABEL org.label-schema.license="GPL-2.0" \\
 
 ## Environment variable for EnergyPlus
 ENV EPLUS_VER ${EPLUS_VER:-', DICT$version[idx], '}
-ENV EPLUS_SHA ${EPLUS_SHA:-', DICT$commit[idx], '}
-ENV EPLUS_FILE EnergyPlus-$EPLUS_VER-$EPLUS_SHA-Linux-x86_64.sh
+ENV EPLUS_SHA ${EPLUS_SHA:-', DICT$commit[idx], '}',
+if (numeric_version(ver) < 9.4) {
+'
+ENV EPLUS_FILE EnergyPlus-$EPLUS_VER-$EPLUS_SHA-Linux-x86_64.sh'
+} else {
+'
+ENV EPLUS_FILE EnergyPlus-$EPLUS_VER-$EPLUS_SHA-Linux-Ubuntu20.04-x86_64.sh'
+},
+'
 ENV EPLUS_URL https://github.com/NREL/EnergyPlus/releases/download/v$EPLUS_VER/$EPLUS_FILE
 
 RUN apt-get update \\

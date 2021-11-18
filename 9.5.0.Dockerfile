@@ -20,4 +20,4 @@ RUN apt-get update \
     ## Install eplusr
     && Rscript -e "install.packages('eplusr', quiet = TRUE)" \
     ## Install EnergyPlus
-    && Rscript -e "eplusr::install_eplus('8.7.0', local = TRUE)"
+    && Rscript -e "eplusr::install_eplus('9.5.0', local = TRUE)"

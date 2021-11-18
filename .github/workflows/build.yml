@@ -14,9 +14,9 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
+      - uses: actions/checkout@v2
       - name: Setup build arguments
         id: set-matrix
-        uses: actions/checkout@v2
         run: |
           CONTENT=$(jq -r 'tostring' matrix.json)
           echo ::set-output name=matrix::${CONTENT}

@@ -1,4 +1,3 @@
-# Modified from https://github.com/rocker-org/rocker-versioned2/blob/master/.github/workflows/core.yml
 name: Build & Push images
 
 on:
@@ -15,24 +14,19 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v2
-      - id: set-json
+      - name: Setup build arguments
+        id: set-matrix
         run: |
-          JSON=matrix.json
-          echo ::set-output name=json::${JSON}
-          echo ${JSON}
-      - id: set-matrix
-        run: |
-          CONTENT=$(jq -r 'tostring' ${{ steps.set-json.outputs.json }})
+          CONTENT=$(jq -r 'tostring' matrix.json)
           echo ::set-output name=matrix::${CONTENT}
           echo ${CONTENT}
 
   build:
-    needs: generate_matrix
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
+      matrix:
+        tag: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
     steps:
       - uses: actions/checkout@v2
 
@@ -54,7 +48,7 @@ jobs:
         with:
           tags: ${{ matrix.tag }}
           # build-time variables
-          build-args: ${{ matrix.args }}}
+          build-args: ${{ matrix.build_args }}}
           # Path to the Dockerfile
           file: ${{ matrix.file }}
           # Do not push on PR

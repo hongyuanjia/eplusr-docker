@@ -45,4 +45,4 @@ mat <- mat[, by = .(eplus_ver = version),
     )
 ]
 
-writeLines(jsonlite::toJSON(as.list(mat), pretty = TRUE), "matrix.json")
+writeLines(jsonlite::toJSON(mat, pretty = TRUE), "matrix.json")

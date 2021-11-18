@@ -36,13 +36,17 @@ writeLines(l, paste0(tag, ".Dockerfile"))
 lapply(DICT$version, dockerfile)
 
 mat <- DICT[, -"commit"]
-mat[1L, version := "latest"]
-mat <- mat[, by = .(eplus_ver = version),
-    .(
-        tag = sprintf("hongyuanjia/eplusr:%s%s", .BY$eplus_ver, c("-verse", "")),
-        file = rep(sprintf("%s.Dockerfile", .BY$eplus_ver), 2L),
-        build_args = sprintf("UPSTREAM=%s", c("verse", "rstudio"))
-    )
-]
+mat <- mat[, by = .(eplus_ver = version), {
+    is_latest <- .BY$eplus_ver == DICT$version[1L]
+
+    len <- 1L + 1L * is_latest
+
+    file <- sprintf("%s.Dockerfile", c(.BY$eplus_ver, "latest")[c(!is_latest, is_latest)])
+    tag <- sprintf("hongyuanjia/eplusr:%s%s", c(.BY$eplus_ver, "latest"[is_latest]), rep(c("-verse", ""), len))
+
+    build_args <- sprintf("UPSTREAM=%s\n", rep(c("verse", "rstudio"), len))
+
+    list(tag = tag, file = file, build_args = build_args)
+}]
 
 writeLines(jsonlite::toJSON(mat, pretty = TRUE), "matrix.json")

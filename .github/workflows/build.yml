@@ -23,11 +23,11 @@ jobs:
           echo ${CONTENT}
 
   build:
+    needs: generate_matrix
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        tag: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
+      matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
     steps:
       - uses: actions/checkout@v2
 

@@ -1,0 +1,182 @@
+[
+  {
+    "version": "latest",
+    "tag": "hongyuanjia/eplusr:latest-verse",
+    "file": "latest.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "latest",
+    "tag": "hongyuanjia/eplusr:latest",
+    "file": "latest.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.5.0",
+    "tag": "hongyuanjia/eplusr:9.5.0-verse",
+    "file": "9.5.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.5.0",
+    "tag": "hongyuanjia/eplusr:9.5.0",
+    "file": "9.5.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.4.0",
+    "tag": "hongyuanjia/eplusr:9.4.0-verse",
+    "file": "9.4.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.4.0",
+    "tag": "hongyuanjia/eplusr:9.4.0",
+    "file": "9.4.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.3.0",
+    "tag": "hongyuanjia/eplusr:9.3.0-verse",
+    "file": "9.3.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.3.0",
+    "tag": "hongyuanjia/eplusr:9.3.0",
+    "file": "9.3.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.2.0",
+    "tag": "hongyuanjia/eplusr:9.2.0-verse",
+    "file": "9.2.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.2.0",
+    "tag": "hongyuanjia/eplusr:9.2.0",
+    "file": "9.2.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.1.0",
+    "tag": "hongyuanjia/eplusr:9.1.0-verse",
+    "file": "9.1.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.1.0",
+    "tag": "hongyuanjia/eplusr:9.1.0",
+    "file": "9.1.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.0.1",
+    "tag": "hongyuanjia/eplusr:9.0.1-verse",
+    "file": "9.0.1.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.0.1",
+    "tag": "hongyuanjia/eplusr:9.0.1",
+    "file": "9.0.1.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "9.0.0",
+    "tag": "hongyuanjia/eplusr:9.0.0-verse",
+    "file": "9.0.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "9.0.0",
+    "tag": "hongyuanjia/eplusr:9.0.0",
+    "file": "9.0.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.9.0",
+    "tag": "hongyuanjia/eplusr:8.9.0-verse",
+    "file": "8.9.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.9.0",
+    "tag": "hongyuanjia/eplusr:8.9.0",
+    "file": "8.9.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.8.0",
+    "tag": "hongyuanjia/eplusr:8.8.0-verse",
+    "file": "8.8.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.8.0",
+    "tag": "hongyuanjia/eplusr:8.8.0",
+    "file": "8.8.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.7.0",
+    "tag": "hongyuanjia/eplusr:8.7.0-verse",
+    "file": "8.7.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.7.0",
+    "tag": "hongyuanjia/eplusr:8.7.0",
+    "file": "8.7.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.6.0",
+    "tag": "hongyuanjia/eplusr:8.6.0-verse",
+    "file": "8.6.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.6.0",
+    "tag": "hongyuanjia/eplusr:8.6.0",
+    "file": "8.6.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.5.0",
+    "tag": "hongyuanjia/eplusr:8.5.0-verse",
+    "file": "8.5.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.5.0",
+    "tag": "hongyuanjia/eplusr:8.5.0",
+    "file": "8.5.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.4.0",
+    "tag": "hongyuanjia/eplusr:8.4.0-verse",
+    "file": "8.4.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.4.0",
+    "tag": "hongyuanjia/eplusr:8.4.0",
+    "file": "8.4.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  },
+  {
+    "version": "8.3.0",
+    "tag": "hongyuanjia/eplusr:8.3.0-verse",
+    "file": "8.3.0.Dockerfile",
+    "build_args": "UPSTREAM=verse"
+  },
+  {
+    "version": "8.3.0",
+    "tag": "hongyuanjia/eplusr:8.3.0",
+    "file": "8.3.0.Dockerfile",
+    "build_args": "UPSTREAM=rstudio"
+  }
+]

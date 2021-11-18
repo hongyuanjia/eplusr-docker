@@ -26,9 +26,9 @@ version tag of EnergyPlus, e.g.  `hongyuanjia/eplusr:9.1.0`, or use the default
 `latest` tag, e.g. `hongyuanjia/eplusr` for the most up-to-date EnergyPlus.
 
 The default upstream container is
-[rocker/rstudio:latest](https://hub.docker.com/r/rocker/rstudio). But you can
+[rocker/rstudio:4.1.0](https://hub.docker.com/r/rocker/rstudio). But you can
 add a suffix `-verse` to get a
-[rocker/verse:latest](https://hub.docker.com/r/rocker/verse) based container,
+[rocker/verse:4.1.0](https://hub.docker.com/r/rocker/verse) based container,
 e.g. `hongyuanjia/eplusr:9.1.0-verse`, `hongyuanjia/eplusr:latest-verse`.
 
 ## Quickstart

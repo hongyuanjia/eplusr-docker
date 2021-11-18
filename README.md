@@ -16,8 +16,8 @@ image                                                 | description             
 
 This repository provides Dockerfiles for working with EnergyPlus in R
 via [eplusr](https://cran.r-project.org/package=eplusr) package, based on
-[rocker/rstudio:latest](https://hub.docker.com/r/rocker/rstudio) and
-[rocker/verse:latest](https://hub.docker.com/r/rocker/verse) container.
+[rocker/rstudio:4.1.0](https://hub.docker.com/r/rocker/rstudio) and
+[rocker/verse:4.1.0](https://hub.docker.com/r/rocker/verse) container.
 
 ## Supported EnergyPlus versions
 

@@ -42,9 +42,9 @@ mat <- mat[, by = .(eplus_ver = version), {
     len <- 1L + 1L * is_latest
 
     file <- sprintf("%s.Dockerfile", c(.BY$eplus_ver, "latest")[c(!is_latest, is_latest)])
-    tag <- sprintf("hongyuanjia/eplusr:%s%s", c(.BY$eplus_ver, "latest"[is_latest]), rep(c("-verse", ""), len))
+    tag <- sprintf("hongyuanjia/eplusr:%s%s", c(.BY$eplus_ver, "latest"[is_latest]), rep(c("-verse", ""), each = len))
 
-    build_args <- sprintf("UPSTREAM=%s\n", rep(c("verse", "rstudio"), len))
+    build_args <- sprintf("UPSTREAM=%s\n", rep(c("verse", "rstudio"), each = len))
 
     list(tag = tag, file = file, build_args = build_args)
 }]

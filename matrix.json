@@ -7,15 +7,15 @@
   },
   {
     "eplus_ver": "9.6.0",
-    "tag": "hongyuanjia/eplusr:latest",
+    "tag": "hongyuanjia/eplusr:latest-verse",
     "file": "latest.Dockerfile",
-    "build_args": "UPSTREAM=rstudio\n"
+    "build_args": "UPSTREAM=verse\n"
   },
   {
     "eplus_ver": "9.6.0",
-    "tag": "hongyuanjia/eplusr:9.6.0-verse",
+    "tag": "hongyuanjia/eplusr:9.6.0",
     "file": "latest.Dockerfile",
-    "build_args": "UPSTREAM=verse\n"
+    "build_args": "UPSTREAM=rstudio\n"
   },
   {
     "eplus_ver": "9.6.0",

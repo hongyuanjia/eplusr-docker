@@ -16,8 +16,10 @@ jobs:
     steps:
       - name: Setup build arguments
         id: set-matrix
+        env:
+          json: "matrix.json"
         run: |
-          CONTENT=$(jq -r 'tostring' matrix.json)
+          CONTENT=$(jq -r 'tostring' ${{ json }})
           echo ::set-output name=matrix::${CONTENT}
           echo ${CONTENT}
 

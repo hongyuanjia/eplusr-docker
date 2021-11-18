@@ -1,8 +1,0 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: hongyuanjia/eplusr:9.1.0-verse
-    steps:
-      - checkout
-      - run: Rscript -e "stopifnot(eplusr::is_avail_eplus(9.1)); tinytex::r_texmf()"

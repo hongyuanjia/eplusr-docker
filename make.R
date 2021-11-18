@@ -25,7 +25,7 @@ RUN apt-get update \\
         ## Necessary for data.table packages
         zlib1g-dev \\
     ## Install eplusr
-    && Rscript -e "install.packages(\'eplusr\', quiet = TRUE)" \\
+    && install2.r eplusr \\
     ## Install EnergyPlus
     && Rscript -e "eplusr::install_eplus(\'', eplus_ver, '\', local = TRUE)"')
 
@@ -34,3 +34,19 @@ writeLines(l, paste0(tag, ".Dockerfile"))
 }
 
 lapply(DICT$version, dockerfile)
+
+mat <- DICT[, -"commit"]
+mat <- mat[, by = .(eplus_ver = version), {
+    is_latest <- .BY$eplus_ver == DICT$version[1L]
+
+    len <- 1L + 1L * is_latest
+
+    file <- sprintf("%s.Dockerfile", c(.BY$eplus_ver, "latest")[c(!is_latest, is_latest)])
+    tag <- sprintf("hongyuanjia/eplusr:%s%s", c(.BY$eplus_ver, "latest"[is_latest]), rep(c("-verse", ""), each = len))
+
+    build_args <- sprintf("UPSTREAM=%s\n", rep(c("verse", "rstudio"), each = len))
+
+    list(tag = tag, file = file, build_args = build_args)
+}]
+
+writeLines(jsonlite::toJSON(mat, pretty = TRUE), "matrix.json")

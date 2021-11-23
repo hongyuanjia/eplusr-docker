@@ -18,6 +18,6 @@ RUN apt-get update \
         ## Necessary for data.table packages
         zlib1g-dev \
     ## Install eplusr
-    && Rscript -e "install.packages('eplusr', repos = c(CRAN = 'http://cran.rstudio.com'))" \
+    && Rscript -e "install.packages('eplusr', repos = 'https://hongyuanjia.r-universe.dev')" \
     ## Install EnergyPlus
     && Rscript -e "eplusr::install_eplus('8.9.0', local = TRUE)"
